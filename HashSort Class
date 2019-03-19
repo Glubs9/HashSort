@@ -1,0 +1,49 @@
+//make sure to change the name of the file to make it easier to run
+//I would also like to mention that this solution is actually really small in terms of line count but I added like 3000+ comments
+
+import java.util.LinkedList;
+
+class hashSort{
+
+    public static LinkedList<Integer> sort(int max, int[] inp){
+        //max is used to decide what is the largest value that might be in the input, inp = input
+        //array
+
+        int[] endarr = new int[max + 1];
+        //endarr is the 'hash table' that will hold the amounts of each number found in the input,
+        //it has a size of max + 1 because the array size assumes you are going from a zero indexed
+        //number to the zero indexed size of the array but the array working as a hash table is uses
+        //numbers not zero indexed so i have to add one to make it work
+
+        for (int i : inp){
+            endarr[i]++;
+        }
+        //this just sorted the input, neato right?
+        //not very space efficient though
+        //what it actually does is just 'hash' the numbers into their place in the array and also
+        //works out how many numbers there are of ecah kind
+
+        //the rest of the code is just making the endarr into the same format as the input array
+
+        LinkedList<Integer> ret = new LinkedList<Integer>();
+        //this is the return value
+
+        for (int i = 0; i < max + 1; i++){
+            for (int n = 0; n < endarr[i]; n++){
+                ret.add(i);
+                //the index of the number is what the number is and the amount at that index is how
+                //many there are at the index
+            }
+        }
+
+        return ret;
+    }
+
+    public static void main(String[] args){
+        LinkedList<Integer> ret = hashSort.sort(6, new int[] {6, 2, 3, 1, 5, 4, 1, 1});
+        for (int n : ret){
+            System.out.println(n);
+        }
+    }
+
+}
