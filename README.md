@@ -1,3 +1,5 @@
+# I have discovered this is called counting sort and it already exists. I am keeping it up still just keep that in mind
+
 # HashSort
 A fast sorting algorithm using 'hash tables'
 (also sorry I will not accept any changes because I am using this as a public portfolio.
