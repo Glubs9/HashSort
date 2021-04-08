@@ -1,4 +1,4 @@
-# I have discovered this is called counting sort and it already exists. I am keeping it up still just keep that in mind
+# I have discovered this is called counting sort and it already exists. I am keeping it up still (for my own historical records) just keep that in mind
 
 # HashSort
 A fast sorting algorithm using 'hash tables'
